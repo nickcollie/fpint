@@ -1,0 +1,121 @@
+
+html{
+  background-color:black;
+}
+
+body{
+	background:transparent;
+	background:url('https://forbiddenplanet.uk/bg2.png');
+  	background-size: contain;
+}
+
+
+/* Color custom properties */
+
+:root,
+.color-background-1 {
+  --color-foreground: var(--color-base-text);
+  --color-background: transparent;
+  --gradient-background: transparent;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h0,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+{
+  color:white;
+}
+
+.link--text{
+	color:#fae802;
+}
+
+
+
+
+
+
+
+
+
+/* ----------- Flex */
+
+.fp_flex_holder{
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* ----------- Header */
+
+#shopify-section-header{  
+	position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.fp_header{
+	background:rgba(0,0,0,0.9);
+
+}
+
+.header__icon {
+  color: white;
+}
+
+#fp_hamburger{
+	text-align:left;
+	width:100px;
+	order:1;
+}
+
+#fp_logo{
+	order:2;
+	width:60%;
+	text-align:center;
+}
+
+#fp_logo img{
+	width:100%;
+	max-width:440px;
+}
+
+#fp_icons{
+	text-align:right;
+	width:100px;
+	order:3;
+}
+
+header-drawer {
+	display:block!important;
+    margin-left: 0 !important;
+}
+
+.search-modal__content{
+	color:white;
+	background:black;
+}
+
+#menu-drawer{
+	max-width:240px;
+	background:rgba(#000, 0.5);
+}
+
+.menu-drawer__menu-item--active, 
+.menu-drawer__menu-item:focus, 
+.menu-drawer__close-button:focus, 
+.menu-drawer__menu-item:hover, 
+.menu-drawer__close-button:hover {
+    color:#fae802!important;
+    background-color: rgba(#aaa, 0.04);
+}
