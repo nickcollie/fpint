@@ -5,7 +5,7 @@
 </div>
 
 
-{% for link in linklists.leftoffcanvas.links %}
+{% for link in linklists.main-menu.links %}
   ssssssssssssssssssss
 {% endfor %}
 
@@ -18,8 +18,13 @@
     {
       "type": "header",
       "content": "There are no settings for this section"
-    }
-    
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "t:sections.offcanvasleft.settings.menu.label"
+    },   
   ]
 }
 {% endschema %}
