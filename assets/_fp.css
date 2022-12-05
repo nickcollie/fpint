@@ -60,16 +60,34 @@ h5,
 /* ----------- Off Canvass Left */
 
 .section-off-canvas-left{
-	background:red;
+	background:#bbb;
 	position:absolute;
 	top:0;
 	height:100vh;
 	width:0;
 	z-index:100;
 	transition: width .5s;
+	overflow:hidden;
 }
 
+#fp_hamburger{
+	text-align:left;
+	width:100px;
+	order:1;
 
+}
+
+#fp_hamburger span,
+#left_closer{
+	display:inline-block;
+	color:white;
+	width:30px;
+	margin:10px;
+}
+
+#left_closer_holder{
+	text-align:right;
+}
 /* ----------- Header */
 
 #shopify-section-header{  
@@ -87,20 +105,7 @@ h5,
   color: white;
 }
 
-#fp_hamburger{
-	text-align:left;
-	width:100px;
-	order:1;
 
-}
-
-#fp_hamburger span{
-	display:block;
-color:white;
-width:30px;
-margin:10px;
-
-}
 
 #fp_logo{
 	order:2;
@@ -141,4 +146,10 @@ header-drawer {
 .menu-drawer__close-button:hover {
     color:#fae802!important;
     background-color: rgba(#aaa, 0.04);
+}
+
+.cart-count-bubble {
+    position: absolute;
+    background-color: #fae802 ;
+    color: black;
 }

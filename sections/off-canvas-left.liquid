@@ -1,4 +1,14 @@
-<span onclick="closeNavLeft()">X</span>
+<div id="left_closer_holder">
+  <span id="left_closer" onclick="closeNavLeft()">
+    {% render 'icon-close' %}
+  </span>
+</div>
+
+
+{% for link in linklists.leftoffcanvas.links %}
+  ssssssssssssssssssss
+{% endfor %}
+
 
 {% schema %}
 {
