@@ -1,4 +1,16 @@
 
+@font-face {
+  font-family: "futura";
+  src: url("{{ 'futura' | asset_url }}") format("[font-format]");
+}
+#
+@font-face {
+  font-family: "futura_bold";
+  src: url("{{ 'futura_bold' | asset_url }}") format("[font-format]");
+}
+
+
+
 html{
   background-color:black;
 }
@@ -40,6 +52,14 @@ body
 
 .link--text{
 	color:#fae802;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+	font-family:futura!important;
 }
 
 
