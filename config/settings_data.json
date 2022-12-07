@@ -106,7 +106,7 @@
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
     "social_twitter_link": "",
-    "social_facebook_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/forbiddenplanetint",
     "social_pinterest_link": "",
     "social_instagram_link": "",
     "social_tiktok_link": "",
@@ -175,16 +175,6 @@
           "footer-2"
         ],
         "settings": {
-          "color_scheme": "background-1",
-          "newsletter_enable": false,
-          "newsletter_heading": "Subscribe to our emails",
-          "show_social": true,
-          "enable_country_selector": false,
-          "enable_language_selector": false,
-          "payment_enable": false,
-          "margin_top": 48,
-          "padding_top": 36,
-          "padding_bottom": 36
         }
       },
       "main-password-header": {
@@ -198,6 +188,12 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "background-1"
+        }
+      },
+      "off-canvas-left": {
+        "type": "off-canvas-left",
+        "settings": {
+          "menu": "leftoffcanvas"
         }
       }
     },
