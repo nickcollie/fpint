@@ -1,21 +1,27 @@
-<div id="left_closer_holder">
-  <span id="left_closer" onclick="closeNavLeft()">
-    {% render 'icon-close' %}
-  </span>
+<div class="inner">
+
+  <div id="left_closer_holder">
+  
+    <span id="left_closer" onclick="closeNavLeft()">
+      {% render 'icon-close' %}
+    </span>
+  </div>
+
+
+
+
+  <ul>
+    {% for link in linklists.leftoffcanvas.links %}
+      <li>
+        <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+          {{ link.title }}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul> 
+
+
 </div>
-
-
-
-                    <ul class="footer-block__details-content list-unstyled">
-                      {% for link in linklists.leftoffcanvas.links %}
-                        <li>
-                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
-                            {{ link.title }}
-                          </a>
-                        </li>
-                      {%- endfor -%}
-                    </ul> 
-
 
 
 {% schema %}
