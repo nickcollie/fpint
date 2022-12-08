@@ -187,7 +187,6 @@ h5{
 }
 
 #fp_icons{
-	position:relative;
 	text-align:right;
 	width:100px;
 	order:3;
@@ -261,6 +260,24 @@ header-drawer {
 	text-align:center;
 	max-width:100%;
 }
+
+.modal__close-button.link,
+.field__button,
+.search__input{
+	background:white;
+	color:black;
+}
+
+
+#predictive-search-results{
+	background:#666;
+	margin:20px;
+}
+
+#predictive-search-products{
+	color:white;
+}
+
 
 
 
