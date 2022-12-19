@@ -3,11 +3,12 @@ html{
 }
 
 body{
-	background:transparent;
-	background:url('https://forbiddenplanet.uk/loungefly/jack5.png');
-  	background-size: cover;
+  background:transparent;
+  background:url('https://forbiddenplanet.uk/loungefly/jack5.png');
+  background-size: cover;
   background-repeat:no-repeat;
   background-attachment: fixed;
+  background-position: top center;
 }
 
 #MainContent{
