@@ -5,7 +5,7 @@ html{
 body{
 	background:transparent;
 	background:url('https://forbiddenplanet.uk/loungefly/jack5.png');
-  	background-size: contain;
+  	background-size: cover;
   background-repeat:no-repeat;
   background-attachment: fixed;
 }
