@@ -1,27 +1,6 @@
-html{
-  background-color:black;
-  background-image: url("https://forbiddenplanet.uk/bg_80.png");
-  background-position: left 30%;
-  background-size: cover;
-  background-repeat:no-repeat;
-  background-attachment: fixed;
-}
-
-
-
-
-html{
-  background-color:black;
-  background-image: url("https://forbiddenplanet.uk/loungefly/jack4.png");
-  background-position: top center;
-  background-size: 100%;
-  background-repeat:no-repeat;
-  background-attachment: fixed;
-}
-
 body{
 	background:transparent;
-	background:url('https://forbiddenplanet.uk/loungefly/jack4.png');
+	background:url('https://forbiddenplanet.uk/loungefly/jack5.png');
   	background-size: contain;
 }
 
