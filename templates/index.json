@@ -1,1 +1,128 @@
-{"sections":{"rich_text":{"type":"rich-text","blocks":{"heading":{"type":"heading","settings":{"heading":"<p>Welcome Members!<\/p>","heading_size":"h1"}},"text":{"type":"text","settings":{"text":"<p>With a few clicks and payment via <strong>PayPal<\/strong> your item will soon be on it's way to you, <\/p><p><strong>FREE SHIPPING!<\/strong> The price you see is the price you pay!<\/p>"}}},"block_order":["heading","text"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":0}},"featured_collection":{"type":"featured-collection","settings":{"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":12,"columns_desktop":4,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"square","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":28,"padding_bottom":36}},"48d250e9-9a43-4850-9f6b-509de59da00d":{"type":"featured-product","blocks":{"template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-0":{"type":"text","settings":{"text":"{{ section.settings.product.vendor }}","text_style":"uppercase"}},"template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-1":{"type":"title","settings":{"heading_size":"h1"}},"template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-2":{"type":"price","settings":{}},"template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-4":{"type":"quantity_selector","settings":{}},"template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-5":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false}},"template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-6":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-0","template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-1","template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-2","template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-4","template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-5","template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-6"],"settings":{"product":"loungefly-collectors-club-gift-card","color_scheme":"background-1","secondary_background":false,"media_size":"medium","constrain_to_viewport":false,"media_fit":"contain","media_position":"left","image_zoom":"lightbox","hide_variants":false,"enable_video_looping":false,"padding_top":36,"padding_bottom":36}}},"order":["rich_text","featured_collection","48d250e9-9a43-4850-9f6b-509de59da00d"]}
+{
+  "sections": {
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Welcome Members!<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With a few clicks and payment via <strong>PayPal<\/strong> your item will soon be on it's way to you, <\/p><p><strong>FREE SHIPPING!<\/strong> The price you see is the price you pay!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "48d250e9-9a43-4850-9f6b-509de59da00d": {
+      "type": "featured-product",
+      "blocks": {
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-0": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-2": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-4": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-5": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-6": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-0",
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-1",
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-2",
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-4",
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-5",
+        "template--16717394870525__48d250e9-9a43-4850-9f6b-509de59da00d-1670947734d1fcf1cc-6"
+      ],
+      "settings": {
+        "product": "loungefly-collectors-club-gift-card",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "rich_text",
+    "featured_collection",
+    "48d250e9-9a43-4850-9f6b-509de59da00d"
+  ]
+}
