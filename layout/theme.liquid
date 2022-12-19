@@ -39,6 +39,16 @@
     %}
 
     {% style %}
+       @font-face {
+        font-family: Futura;
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src: url("/fonts/futura/futura_n4.df36ce3d9db534a4d7947f4aa825495ed740e410.woff2?h1=bG91bmdlZmx5LmZvcmJpZGRlbnBsYW5ldC5jby51aw&hmac=1c558f1e6333b6cdb2f35d05285ce18b4e14d0e652158d1d20871bb98af26795") format("woff2"),
+             url("/fonts/futura/futura_n4.6bce24beb4ba1ff4ddeb20f7cd6e2fa513a3d6ec.woff?h1=bG91bmdlZmx5LmZvcmJpZGRlbnBsYW5ldC5jby51aw&hmac=340ab9079090c530f39f2892e1ca815773e0773a3a5cf76163e68867c0799f7b") format("woff");
+      }
+
+
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
@@ -46,6 +56,11 @@
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       :root {
+
+
+        --fp-yellow: #fae802;
+
+
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
@@ -57,12 +72,12 @@
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
-        --color-base-text: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
+        --color-base-text: white;
         --color-shadow: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
         --color-base-background-1: {{ settings.colors_background_1.red }}, {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};
         --color-base-background-2: {{ settings.colors_background_2.red }}, {{ settings.colors_background_2.green }}, {{ settings.colors_background_2.blue }};
         --color-base-solid-button-labels: {{ settings.colors_solid_button_labels.red }}, {{ settings.colors_solid_button_labels.green }}, {{ settings.colors_solid_button_labels.blue }};
-        --color-base-outline-button-labels: {{ settings.colors_outline_button_labels.red }}, {{ settings.colors_outline_button_labels.green }}, {{ settings.colors_outline_button_labels.blue }};
+        --color-base-outline-button-labels: white;
         --color-base-accent-1: {{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }};
         --color-base-accent-2: {{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }};
         --payment-terms-background-color: {{ settings.colors_background_1 }};
@@ -215,6 +230,8 @@
       }
     {% endstyle %}
 
+
+
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
@@ -235,7 +252,9 @@
     </script>
 
     {{ '_fp.css' | asset_url | stylesheet_tag }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer="defer"></script>
     <script src="{{ '_fp.js' | asset_url }}" defer="defer"></script>
+
     {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css' | stylesheet_tag }}
   </head>
 
@@ -249,7 +268,7 @@
     {%- endif -%}
     {% section 'off-canvas-left' %}
     {% section 'announcement-bar' %}
-    <div class="second_logo"><img src="https://forbiddenplanet.uk/loungefly/loungefly.png"/></div>
+    <div class="second_logo"><a href="/"><img src="https://forbiddenplanet.uk/loungefly/loungeflyWhite.png"/></a></div>
     {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
 

@@ -82,29 +82,7 @@
   }
 </style>
 
-{%- style -%}
-  .header {
-    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
-  }
 
-  .section-header {
-    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-header {
-      margin-bottom: {{ section.settings.margin_bottom }}px;
-    }
-  }
-
-  @media screen and (min-width: 990px) {
-    .header {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
@@ -123,19 +101,22 @@
   </symbol>
 </svg>
 
-<div class="fp_header header-wrapper fp_flex_holder">
-  <div id="fp_hamburger" onclick="openNavLeft()">
-    {%- render '_fp_hamburger' -%}
-  </div>
-  
-  <div id="fp_logo">
-    <div><a href="/"><img src="https://forbiddenplanet.uk/logo.png"/></a></div>
-    
-  </div>
+<div id="fp_header_scroll" class="fp_width">
+  <div class="fp_header header-wrapper fp_flex_holder">
 
-  
-  <div id="fp_icons" >
-    {%- render '_fp_header_icons' -%}
+    <div id="fp_hamburger" onclick="openNavLeft()">
+      {%- render '_fp_hamburger' -%}
+    </div>
+    
+    <div id="fp_logo">
+      <div><a href="/"><img src="https://forbiddenplanet.uk/logo.png"/></a></div>
+      
+    </div>
+
+    
+    <div id="fp_icons" >
+      {%- render '_fp_header_icons' -%}
+    </div>
   </div>
 </div>
 

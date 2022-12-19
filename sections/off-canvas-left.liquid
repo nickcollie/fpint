@@ -21,6 +21,18 @@
   </ul> 
 
 
+  <ul>
+    {% for product in collections.in-stock.products %}
+      <li>
+        <a href="{{ product.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+          {{ product.title }}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+
+
 </div>
 
 

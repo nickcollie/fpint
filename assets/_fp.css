@@ -1,24 +1,39 @@
+html{
+  background-color:black;
+  background-image: url("https://forbiddenplanet.uk/bg_80.png");
+  background-position: left 30%;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+}
 
-@font-face {
-  font-family: "futura";
-  src: url("{{ 'futura' | asset_url }}") format("[font-format]");
-}
-#
-@font-face {
-  font-family: "futura_bold";
-  src: url("{{ 'futura_bold' | asset_url }}") format("[font-format]");
-}
 
 
 
 html{
   background-color:black;
+  background-image: url("https://forbiddenplanet.uk/loungefly/jack4.png");
+  background-position: top center;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
 }
 
 body{
 	background:transparent;
 	background:url('https://forbiddenplanet.uk/bg2.png');
   	background-size: contain;
+}
+
+#MainContent{
+	padding-top:30px;
+}
+
+
+.page-width,
+.fp_width{
+	max-width:1500px;
+	margin:0 auto;
 }
 
 
@@ -46,12 +61,21 @@ h5,
 p,
 span,
 body
+
 {
   color:white;
 }
 
+quantity-input.quantity{
+	color:black;
+}
+
+a:hover{
+	text-decoration:none!important;
+}
+
 .link--text{
-	color:#fae802;
+	color:var(--fp-yellow);
 }
 
 h1,
@@ -59,15 +83,102 @@ h2,
 h3,
 h4,
 h5{
-	font-family:futura!important;
+	font-family:Futura!important;
+}
+
+.field{
+	border:1px solid #666;
+	border-radius:2px;
+}
+
+
+.badge {
+    background-color: var(--fp-yellow);
+    border-color: var(--fp-yellow);
+    color: black;
+    font-size: 120%;
+    text-transform:uppercase;
+    font-weight:700;
+}
+
+.rte a{
+	color:white!important;
+}
+
+.card__information a{
+	text-decoration:none!important;
+}
+
+.card__information a:hover{
+	color: var(--fp-yellow);
 }
 
 
 
+/* ----------- Buttons */
+
+.button, 
+.shopify-challenge__button, 
+.customer 
+button{
+	position:relative;
+    color: var(--fp-yellow);
+    background-color: black;
+    border:1px solid var(--fp-yellow);
+    border-radius:2px;
+    transition-property: background;
+    transition-duration: 1s;
+    overflow:hidden;
+}
+
+button::before{
+	content: '';
+	display:block;
+	background:var(--fp-yellow);
+	width:100%;
+	height: 100%;
+	margin-left:-100%;
+	transition: margin 0.5s;
+	opacity:1!important;
+}
+
+button.quantity__button::before{
+	background:transparent;
+	margin-left:0%;
+	width:0;
+	height:0;
+}
 
 
+button span{
+	color: var(--fp-yellow);
+	z-index:2;
+}
+
+button:hover::before{
+	margin-left:0;
+	z-index:2;
+}
 
 
+button:hover,
+button:hover span{
+	color:black!important;
+}
+
+
+.shopify-payment-button__more-options{
+	display:none;
+}
+
+
+.cart__checkout-button::before{
+	content:'Checkout';
+	color:black;
+	width:100%;
+	height:100%;
+	line-height:45px;
+}
 
 
 /* ----------- Flex */
@@ -84,6 +195,11 @@ h5{
 
 #CartDrawer{
 	background:#111;
+	border-left:2px solid white;
+}
+
+.drawer__cart-items-wrapper th{
+	display:none;
 }
 
 
@@ -103,6 +219,7 @@ h5{
 .section-off-canvas-left .inner{
 	height:100vh;
 	border-right:2px solid white;
+	overflow-y:scroll;
 }
 
 
@@ -125,17 +242,19 @@ h5{
 	text-transform: uppercase;
 	line-height:2em;
 	text-decoration:none;
-	white-space:nowrap;
+	/*white-space:nowrap;*/
 }
+
+
 
 
 .section-off-canvas-left a.list-menu__item--active,
 .section-off-canvas-left a:hover{
-	color:#fae802;
+	color:var(--fp-yellow);
 	background:#333;
 }
 
-
+#fp_hamburger_top span,
 #fp_hamburger span,
 #left_closer{
 	display:inline-block;
@@ -148,6 +267,11 @@ h5{
 #left_closer_holder{
 	text-align:right;
 }
+
+#left_closer_holder{
+	position:sticky;
+	top:0;
+}
 /* ----------- Header */
 
 #shopify-section-header{  
@@ -156,8 +280,12 @@ h5{
   top: 0;
 }
 
+.black_opacity{
+		/*background:rgba(0,0,0,0.9);*/
+}
+
 .fp_header{
-	background:rgba(0,0,0,0.9);
+
 	align-items: center;
 }
 
@@ -165,18 +293,19 @@ h5{
   color: white;
 }
 
-#fp_hamburger{
+#fp_hamburger,
+#fp_hamburger_top{
 	text-align:left;
-	width:100px;
+	width:150px;
 	order:1;
 
 }
 
 
-
+#fp_logo_top,
 #fp_logo{
 	order:2;
-	width:60%;
+	width:calc(100% - 300px);
 	height:44px;
 	text-align:center;
 }
@@ -186,39 +315,49 @@ h5{
 	max-width:300px;
 }
 
-#fp_icons{
+#fp_icons,
+#fp_icons_top{
 	text-align:right;
-	width:100px;
+	width:150px;
 	order:3;
 	padding-right:20px;
 }
 
-#fp_icons .header__icons{
+#fp_icons .header__icons,
+#fp_icons_top .header__icons{
 	justify-content: right;
 	width:100%;
 }
 
+#fp_icons,
+#fp_hamburger{
+	visibility:hidden;
+}
+
 @media screen and (max-width: 500px) {
 
-	.fp_header{
+	.fp_flex_holder{
 		flex-wrap: wrap;
 	}
 	
 
-	#fp_icons{
+	#fp_icons,
+	#fp_icons_top{
 		text-align:right;
-		width:50%;
-		order:3;
-	}
-
-	#fp_hamburger{
-		text-align:left;
 		width:50%;
 		order:2;
 	}
 
-	#fp_logo{
+	#fp_hamburger,
+	#fp_hamburger_top{
+		text-align:left;
+		width:50%;
 		order:1;
+	}
+
+	#fp_logo,
+	#fp_logo_top{
+		order:3;
 		width:100%;
 		height:44px;
 		text-align:center;
@@ -245,14 +384,17 @@ header-drawer {
 .menu-drawer__close-button:focus, 
 .menu-drawer__menu-item:hover, 
 .menu-drawer__close-button:hover {
-    color:#fae802!important;
+    color:var(--fp-yellow)!important;
     background-color: rgba(#aaa, 0.04);
 }
 
 .cart-count-bubble {
     position: absolute;
-    background-color: #fae802 ;
-    color: black;
+    background-color: var(--fp-yellow) ;
+    
+}
+.cart-count-bubble span{
+	color: black!important;
 }
 
 .second_logo,
@@ -288,7 +430,6 @@ header-drawer {
 
 footer{
 	margin-top:30px;
-	border-top:1px solid #666;
 	padding-top:30px;
 }
 
@@ -310,7 +451,7 @@ footer .list-social{
 }
 
 .list-social__item a:hover{
-	color: #fae802 ;
+	color: var(--fp-yellow) ;
 }
 
 footer .list-social__item .icon {
@@ -319,9 +460,141 @@ footer .list-social__item .icon {
 }
 
 footer .footer-block h2{
-	color:#fae802 ;
-	border-top:1px solid #666 ;
-	border-bottom:1px solid #666 ;
+	color:var(--fp-yellow) ;
+
 	padding:10px;
 	text-align:center;
 }
+
+.footer__blocks-wrapper{
+	align-items: center;
+		border-top:1px solid #666 ;
+	border-bottom:1px solid #666 ;
+}
+
+.footer__blocks-wrapper h2{
+	margin:0;
+}
+
+.footer__blocks-wrapper h2 a{
+	color: var(--fp-yellow);
+}
+
+
+
+/* ----------- banner */
+
+.banner{
+	max-width:1500px;
+	border:2px solid white;
+	margin:0 auto;
+}
+
+/* ----------- product */
+
+.product__title h1{
+	text-transform:uppercase;
+	font-size:24px;
+}
+
+.product-recommendations{
+	text-align:center;
+	text-transform:uppercase;
+	border-top:1px solid white;
+	padding-top:24px;
+	margin-top:40px;
+}
+
+.price-item{
+	color:#ccc!important;
+}
+
+.quantity__input {
+    color: currentColor;
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 0.85;
+    text-align: center;
+    background-color: white!important;
+    border: 0;
+    padding: 0 0.5rem;
+    width: 100%;
+    flex-grow: 1;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.quantity__button {
+    background-color: white!important;
+}
+
+
+
+.price__container .price-item{
+	color:var(--fp-yellow)!important;
+	font-weight:800;
+}
+
+
+.price__container .price__sale .price-item.price-item--regular{
+	color:red!important;
+}
+
+
+/* ----------- home */
+.collection__title h2{
+	border-top:2px solid #aaa;
+	padding-top:20px;
+	margin-top:60px!important;
+}
+
+.fp_title{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:space-between;
+}
+
+.fp_title a,
+.fp_title a:visited{
+	text-decoration:none;
+	font-size:14px;
+	color:white;
+}
+
+.fp_title a:hover{
+	color:var(--fp-yellow);
+}
+
+
+.product-card-wrapper{
+	padding-bottom:60px;
+}
+
+.rich-text{
+	/*background:rgba(0,0,0,0.7);
+	padding-bottom:40px!important;
+	max-width:1000px;
+	margin:0 auto;*/
+}
+
+
+/* ----------- odds and ends */
+.shopify-policy__container{
+	max-width:1000px;
+	background:rgba(0,0,0,0.8);
+}
+
+cart-items,
+#main-cart-footer{
+	background:rgba(0,0,0,0.8);
+}
+
+.customer{
+	width:100%!important;
+	max-width:1000px!important;
+	background:rgba(0,0,0,0.8);
+}
+
+
+
+
