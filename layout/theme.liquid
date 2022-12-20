@@ -138,7 +138,7 @@
         --drawer-shadow-vertical-offset: {{ settings.drawer_shadow_vertical_offset }}px;
         --drawer-shadow-blur-radius: {{ settings.drawer_shadow_blur }}px;
 
-        --spacing-sections-desktop: {{ settings.spacing_sections }}px;
+        --spacing-sections-desktop: 8px;
         --spacing-sections-mobile: {% if settings.spacing_sections < 24 %}{{ settings.spacing_sections }}{% else %}{{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}{% endif %}px;
 
         --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}px;
