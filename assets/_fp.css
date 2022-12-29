@@ -590,17 +590,19 @@ cart-items,
 }
 
 .second_logo a{
-	font-size:130px;
-	line-height:130px;
+	font-size:	clamp(80px, 20vw, 130px);
+
+	line-height:1em;
 	text-decoration:none;
+	color:white;
+  	font-family: 'comic', cursive;
 
 }
 
 .neonText {
 
   
-  color:white;
-  font-family: 'comic', cursive;
+
 
   
 }
