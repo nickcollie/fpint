@@ -38,7 +38,13 @@
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
 
-
+<style>
+  /*https://fontbundles.net/alit-design/2268291-komigo-comic-font*/
+  @font-face {
+    font-family: "comic";
+    src: url("assets/comic.woff") format('woff');
+  }
+</style>
     {{ settings.colors_text.red }}
     {% style %}
        @font-face {
@@ -50,7 +56,14 @@
              url("/fonts/futura/futura_n4.6bce24beb4ba1ff4ddeb20f7cd6e2fa513a3d6ec.woff?h1=bG91bmdlZmx5LmZvcmJpZGRlbnBsYW5ldC5jby51aw&hmac=340ab9079090c530f39f2892e1ca815773e0773a3a5cf76163e68867c0799f7b") format("woff");
       }
 
-
+      @font-face {
+        font-family: Kalam;
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+        src: url("https://fonts.shopifycdn.com/kalam/kalam_n3.399e669f29f3c3c5d5763f6b13ac58fbed8362dc.woff2?h1=bmljY29sbmljY29sLmFjY291bnQubXlzaG9waWZ5LmNvbQ&hmac=99e38247432d0ed5fe86648980ef766e039f7b87529af4b3507e66dd279eaa3d") format("woff2"),
+             url("https://fonts.shopifycdn.com/kalam/kalam_n3.7be75da1a50d9c5db693ce75d87ad9b102499018.woff?h1=bmljY29sbmljY29sLmFjY291bnQubXlzaG9waWZ5LmNvbQ&hmac=613858fec4e3cf55ae2e3fbf6524b58497d90367129287d539560142c26caeac") format("woff");
+      }
 
       :root {
 
@@ -254,7 +267,7 @@
     {%- endif -%}
     {% section 'off-canvas-left' %}
     {% section 'announcement-bar' %}
-    <div class="second_logo"><a href="/"><img src="https://forbiddenplanet.uk/loungefly/loungeflyWhite.png"/></a></div>
+    <div class="second_logo"><a class="neonText" href="/">Comics</a></div>
     {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
 
