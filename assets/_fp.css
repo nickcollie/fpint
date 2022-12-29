@@ -1,3 +1,5 @@
+@import url("_fp_comics.css");
+
 html{
   background-color:black;
 }
@@ -69,7 +71,7 @@ h2,
 h3,
 h4,
 h5{
-	font-family: 'comic', cursive;
+	font-family: 'Futura'!important;
 }
 
 .field{
@@ -99,7 +101,10 @@ h5{
 	color: var(--fp-yellow);
 }
 
+.field__label, .customer .field label {
 
+    color: black;
+}
 
 /* ----------- Buttons */
 
@@ -109,13 +114,15 @@ h5{
 button{
 	position:relative;
     color: var(--fp-yellow);
-    background-color: black;
+    background-color: transparent;
     border:1px solid var(--fp-yellow);
     border-radius:2px;
     transition-property: background;
     transition-duration: 1s;
     overflow:hidden;
 }
+
+
 
 button::before{
 	content: '';
@@ -128,7 +135,10 @@ button::before{
 	opacity:1!important;
 }
 
+.search-modal__close-button::before, 
+.search-modal__content button::before,
 button.quantity__button::before{
+	display:none;
 	background:transparent;
 	margin-left:0%;
 	width:0;
@@ -143,7 +153,7 @@ button span{
 
 button:hover::before{
 	margin-left:0;
-	z-index:2;
+	z-index:-1;
 }
 
 
@@ -241,7 +251,15 @@ button:hover span{
 }
 
 #fp_hamburger_top span,
-#fp_hamburger span,
+#fp_hamburger span{
+	position:fixed;
+	display:inline-block;
+	color:white;
+	width:24px;
+	height:24px;
+	margin:10px;
+}
+
 #left_closer{
 	display:inline-block;
 	color:white;
@@ -260,95 +278,80 @@ button:hover span{
 }
 /* ----------- Header */
 
+#fp_logo{
+	width:95%;
+	max-width:300px;
+	margin:0 auto;
+	text-align;center;
+}
+
+#fp_logo img{
+	max-width:100%;
+}
+
+@media screen and (max-width: 500px) {
+	#fp_logo{
+		padding-top:50px;
+	}
+
+	.second_logo{
+		margin-bottom:-50px;
+	}
+}
+
+#fp_hamburger_fixed{
+	height:50px;
+	width:150px;
+	position:fixed;
+	z-index:20;
+}
+
+#fp_hamburger_fixed span{
+	display:inline-block;
+	height:24px;
+	width:24px;
+	margin:13px;
+	pointer-events: auto; 
+}
+
+#fp_icons_fixed{
+	height:100%;
+	width:100%;
+	position:fixed;
+	right:0;
+	z-index:10;
+	pointer-events: none; 
+}
+
+#fp_icons_fixed .header__icons{
+	padding-right:20px;
+	pointer-events: auto; 
+}
+
+.header__icons {
+    justify-content: right;
+}
+
+.announcement-bar{
+	max-width:500px;
+	margin:0 auto;
+	text-align:center;
+}
+
+@media screen and (max-width: 800px) {
+	.announcement-bar{
+		padding-top:50px;
+	}
+}
+
+
 #shopify-section-header{  
-	position: sticky;
+position: sticky;
   position: -webkit-sticky;
   top: 0;
 }
 
-.black_opacity{
-		/*background:rgba(0,0,0,0.9);*/
-}
 
-.fp_header{
-
-	align-items: center;
-}
-
-.header__icon {
-  color: white;
-}
-
-#fp_hamburger,
-#fp_hamburger_top{
-	text-align:left;
-	width:150px;
-	order:1;
-
-}
-
-
-#fp_logo_top,
-#fp_logo{
-	order:2;
-	width:calc(100% - 300px);
-	height:44px;
-	text-align:center;
-}
-
-#fp_logo img{
-	width:100%;
-	max-width:300px;
-}
-
-#fp_icons,
-#fp_icons_top{
-	text-align:right;
-	width:150px;
-	order:3;
-	padding-right:20px;
-}
-
-#fp_icons .header__icons,
-#fp_icons_top .header__icons{
-	justify-content: right;
-	width:100%;
-}
-
-#fp_icons,
-#fp_hamburger{
-	visibility:hidden;
-}
-
-@media screen and (max-width: 500px) {
-
-	.fp_flex_holder{
-		flex-wrap: wrap;
-	}
-	
-
-	#fp_icons,
-	#fp_icons_top{
-		text-align:right;
-		width:50%;
-		order:2;
-	}
-
-	#fp_hamburger,
-	#fp_hamburger_top{
-		text-align:left;
-		width:50%;
-		order:1;
-	}
-
-	#fp_logo,
-	#fp_logo_top{
-		order:3;
-		width:100%;
-		height:44px;
-		text-align:center;
-	}
-}
 
 header-drawer {
 	display:block!important;
@@ -357,7 +360,7 @@ header-drawer {
 
 .search-modal__content{
 	color:white;
-	background:black;
+	background:rgba(0,0,0,0.9);
 }
 
 #menu-drawer{
@@ -584,52 +587,7 @@ cart-items,
 
 
 
-/* ----------- comics */
-.second_logo{
-	margin-bottom:20px;
-}
 
-.second_logo a{
-	font-size:	clamp(80px, 20vw, 130px);
-
-	line-height:1em;
-	text-decoration:none;
-	color:white;
-  	font-family: 'comic', cursive;
-
-}
-
-.neonText {
-
-  
-
-
-  
-}
-
-
-@keyframes flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-  	color: black;
-  text-shadow:
-
-      0 0 42px #5271ff,
-      0 0 82px #5271ff,
-      0 0 92px #5271ff,
-      0 0 102px #5271ff,
-      0 0 151px #5271ff;
-  }
-  20%, 24%, 55% { 
-  	color:#666;
-    text-shadow: none;
-  }
-}
-
-
-.fp_title{
-	letter-spacing:2px;
-	font-family: 'comic', cursive;
-}
 
 
 

@@ -101,23 +101,11 @@
   </symbol>
 </svg>
 
-<div id="fp_header_scroll" class="fp_width">
-  <div class="fp_header header-wrapper fp_flex_holder">
-
-    <div id="fp_hamburger" onclick="openNavLeft()">
-      {%- render '_fp_hamburger' -%}
-    </div>
-    
+<div id="fp_header_scroll">
     <div id="fp_logo">
       <div><a href="/"><img src="https://forbiddenplanet.uk/logo.png"/></a></div>
       
     </div>
-
-    
-    <div id="fp_icons" >
-      {%- render '_fp_header_icons' -%}
-    </div>
-  </div>
 </div>
 
 {%- if settings.cart_type == "notification" -%}
